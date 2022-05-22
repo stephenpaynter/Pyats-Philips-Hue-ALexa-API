@@ -1,0 +1,25 @@
+--
+
+- hosts: localhost
+  gather_facts: false
+
+  vars:
+    _token: cYrogcQrJAv-zqaaoNjBRljNIMF3j8AQ52F-tOBC
+    _light_id: 9
+
+  tasks:
+
+  - name: GET Light Information
+    uri:
+      url: "http://192.168.1.86/api/{{ _token }}/lights/{{ _light_id }}"
+      method: GET
+      headers: 
+        Accept: application/json 
+      return_content: yes
+      validate_certs: no
+      force_basic_auth: no
+      follow_redirects: yes
+    register: light_info
+
+  - debug:
+      var: light_info

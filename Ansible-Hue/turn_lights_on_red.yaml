@@ -1,0 +1,28 @@
+---
+
+- hosts: localhost
+  gather_facts: false
+
+  vars:
+    _token: cYrogcQrJAv-zqaaoNjBRljNIMF3j8AQ52F-tOBC
+    _light_id: 9
+    _data_on: '{"on":True, "sat":254, "bri":254,"hue":5000,"ct": 500, "xy": [0.6792,0.3038]}'
+
+  tasks:
+
+  - name: Turn Light On Red
+    uri:
+      url: "http://192.168.1.86/api/{{ _token }}/lights/{{ _light_id }}/state"
+      method: PUT
+      body: "{{ _data_on }}"
+      body_format: json
+      headers: 
+        Accept: application/json 
+      return_content: yes
+      validate_certs: no
+      force_basic_auth: no
+      follow_redirects: yes
+    register: light_on
+
+  - debug:
+      var: light_on
