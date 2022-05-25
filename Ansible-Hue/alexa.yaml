@@ -1,0 +1,23 @@
+---
+
+- hosts: localhost
+  gather_facts: false
+
+  vars:
+    _access_code: amzn1.ask.account.AEDNYHP3724A4XZEYNKSUJLB2FL2EWO6D7AI6JAZEJFQYBTYVY2GJP4E567VUXDVCWVTMQKSTO727Y22DD66VECXC5TZG6QPNHJ5RQR3U4MALNEMGSKDFGVN2RZP2VCGY46WQ5KTRYKOFPAF5J5JNRBTHGFBCUB7SNPBNK7DRLEXLBQJJSSOMYAUQSXVWT6JXPSLMUXFK2JXE5Y
+    _message: Hello World
+    
+
+  tasks:
+
+  - name: Send POST to Alexa
+    uri:
+      url: "https://api.notifymyecho.com/v1/NotifyMe"
+      method: POST
+      body: '{"notification":"{{ _message }}","accessCode":"{{ _access_code }}"}'
+      body_format: json
+      return_content: true
+      status_code: [202]
+      headers: 
+        content-type: application/json 
+      validate_certs: no
