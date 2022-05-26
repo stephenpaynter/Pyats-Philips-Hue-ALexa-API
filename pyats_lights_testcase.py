@@ -30,5 +30,5 @@ print (_routecheck)
 
 if _routecheck == 6:
    r = requests.put(url, json.dumps(_data_on_green), timeout=5)
-elif _routecheck != 6:
+else:
    r = requests.put(url, json.dumps(_data_on_red), timeout=5)
