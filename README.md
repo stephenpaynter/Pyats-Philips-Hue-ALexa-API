@@ -20,8 +20,7 @@ Create a developer account for the REST API documentation
 Log in to your Amazon store and search the “Notify Me Skill” – it’s free.
 I’m not going to cover setting up the skill on your Amazon device – just a note that it took me about two minutes to complete.
 Remember to open or launch the skill (“Alexa, open Notify Me” or “Alexa, launch the Notify Me skill”).
-This will trigger the Notify Me skill to send you an email with your setup instructions, your super-secret access code (API key) and a link to the documentation at https://www.thomptronics.com/about/notify-me.
-
+This will trigger the Notify Me skill to send you an email with your setup instructions, your super-secret access code (API key) and a link to the documentation at 
 https://www.thomptronics.com/about/notify-me
 
 
