@@ -12,7 +12,7 @@ https://pubhub.devnetcloud.com/media/genie-docs/docs/cookbooks/genie.html
 https://github.com/clay584/genie_collection
 
 # Philips Hue SDK
-pip install huesdk.   
+pip install huesdk   
 https://developers.meethue.com/develop/hue-api/.   
 Create a developer account for the REST API documentation.  
 
