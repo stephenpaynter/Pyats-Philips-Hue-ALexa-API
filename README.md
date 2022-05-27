@@ -12,9 +12,9 @@ https://pubhub.devnetcloud.com/media/genie-docs/docs/cookbooks/genie.html
 https://github.com/clay584/genie_collection
 
 # Philips Hue SDK
-pip install huesdk
-https://developers.meethue.com/develop/hue-api/
-Create a developer account for the REST API documentation
+pip install huesdk. 
+https://developers.meethue.com/develop/hue-api/. 
+Create a developer account for the REST API documentation. 
 
 # Amazon Alexa Notify Me
 Log in to your Amazon store and search the “Notify Me Skill” – it’s free.
